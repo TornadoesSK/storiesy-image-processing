@@ -14,5 +14,7 @@ COPY . .
 # Expose port 5000 to the outside world
 EXPOSE 80
 
+ENV FLASK_APP=main.py
+
 # Define the command to run the app when the container starts
-CMD ["python", "main.py"]
+CMD ["flask", "run"]
